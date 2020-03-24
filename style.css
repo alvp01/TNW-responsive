@@ -1,0 +1,7 @@
+html, body, h1,
+h2, h3, h4,
+ul, li, a,
+p, span {
+  margin: 0;
+  padding: 0;
+}
