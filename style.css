@@ -14,6 +14,7 @@ div,
 section {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -93,7 +94,7 @@ body {
   --margin-multiplier1: 0;
   --margin-multiplier2: 1;
   --articles-height: 210px;
-  --main-articles-margin: 5px;
+  --main-articles-margin: 10px;
   --secondary-wrapper-width: 100%;
   --first-main-article-width: 100%;
 
@@ -105,8 +106,6 @@ body {
   width: var(--first-main-article-width);
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/11/pc-gaming-796x398.jpg");
   background-size: cover;
-  margin-right: calc(var(--margin-multiplier1) * var(--main-articles-margin));
-  margin-bottom: calc(var(--margin-multiplier2) * var(--main-articles-margin));
 }
 
 @media (min-width: 768px) {
@@ -115,8 +114,8 @@ body {
     --margin-multiplier1: 1;
     --margin-multiplier2: 0;
     --articles-height: 210px;
-    --secondary-wrapper-width: 33%;
-    --first-main-article-width: 65%;
+    --secondary-wrapper-width: 34%;
+    --first-main-article-width: 66%;
   }
 
   .main-article1 { height: auto; }
@@ -149,8 +148,8 @@ body {
 
 .main-section-container {
   width: var(--secondary-wrapper-width);
-  margin-left: calc(var(--margin-multiplier1) * var(--main-articles-margin));
-  margin-top: calc(var(--margin-multiplier2) * var(--main-articles-margin));
+  padding-left: calc(var(--margin-multiplier1) * var(--main-articles-margin));
+  padding-top: calc(var(--margin-multiplier2) * var(--main-articles-margin));
 }
 
 .main-article2-container { padding-bottom: 5px; }
@@ -290,3 +289,7 @@ body {
 .latest-article-info-link:hover { color: #aaa; }
 
 .latest-news-title { padding-left: var(--elements-padding); }
+
+.funding-section {
+
+}
