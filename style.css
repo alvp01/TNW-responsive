@@ -197,3 +197,96 @@ body {
 }
 
 .main-article-data a:hover { color: hsla(0, 0%, 100%, 0.6); }
+
+.secondary-sections { justify-content: center; }
+
+.secondary-sections-container { max-width: 1200px; }
+
+.latest-section,
+.funding-section {
+  --article-width: 100%;
+  --elements-padding: 10px;
+}
+
+.latest-section {
+  --img-width: 75px;
+  --img-height: 75px;
+  --deal-img-height: 75px;
+  --img-float: left;
+  --img-margin: 8px;
+  --img-margin-x: 1;
+  --img-margin-y: 0;
+}
+
+@media (min-width: 768px) {
+  .latest-section,
+  .funding-section { --article-width: 33%; }
+
+  .latest-section {
+    --img-width: 100%;
+    --img-height: 115px;
+    --deal-img-height: 170px;
+    --img-float: none;
+    --img-margin-x: 0;
+    --img-margin-y: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .latest-section,
+  .funding-section { --article-width: 25%; }
+
+  .latest-section {
+    --img-height: 130px;
+    --deal-img-height: 200px;
+  }
+}
+
+.latest-article {
+  width: var(--article-width);
+  padding: var(--elements-padding);
+}
+
+.latest-article-img,
+.latest-deal-img {
+  width: var(--img-width);
+  height: var(--img-height);
+  float: var(--img-float);
+  margin-right: calc(var(--img-margin) * var(--img-margin-x));
+  margin-bottom: calc(var(--img-margin) * var(--img-margin-y));
+  object-fit: cover;
+}
+
+.latest-article-img { height: var(--img-height); }
+
+.latest-deal-img { height: var(--deal-img-height); }
+
+.latest-article-text-container {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.latest-articles-headings { font-weight: 700; }
+
+.latest-article-info {
+  list-style: none;
+  font-size: 12px;
+  flex-direction: row;
+  text-decoration: none;
+  color: #aaa;
+  padding-left: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.latest-article-info li { margin-right: 10px; }
+
+.latest-article-info-link {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.latest-article-info-link:hover { color: #aaa; }
+
+.latest-news-title { padding-left: var(--elements-padding); }
