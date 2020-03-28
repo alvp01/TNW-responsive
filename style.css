@@ -288,4 +288,141 @@ body {
 
 .latest-article-info-link:hover { color: #aaa; }
 
-.latest-news-title { padding-left: var(--elements-padding); }
+.latest-news-title,
+.funding-title { padding-left: var(--elements-padding); }
+
+.funding-section {
+  --list-border: none;
+  --list-container-direction: column;
+  --list-font-size: 14px;
+  --list-line-height: 18px;
+  --justify-texts: space-between;
+  --align-container-text: flex-start;
+  --list-element-margin: 11px;
+  --list-margin-x: 0;
+  --list-margin-y: 1;
+  --article-display: none;
+}
+
+@media (min-width: 1024px) {
+  .funding-section {
+    --list-font-size: 16px;
+    --list-margin-x: 1;
+    --list-margin-y: 0;
+    --list-container-direction: row;
+    --justify-texts: space-between;
+    --align-container-text: center;
+    --list-border: 1px solid #f42;
+    --article-display: block;
+  }
+}
+
+.funding-tittle { display: block; }
+
+.title-container {
+  flex-direction: var(--list-container-direction);
+  justify-content: var(--justify-texts);
+  align-items: var(--align-container-text);
+  word-wrap: break-word;
+  padding-right: var(--elements-padding);
+}
+
+.title-links {
+  flex-direction: var(--list-direction);
+  padding-left: var(--elements-padding);
+  flex-direction: var(--list-container-direction);
+}
+
+.funding-links,
+.funding-links-no-border {
+  padding-top: calc(var(--list-element-margin) * var(--list-margin-y));
+  padding-right: calc(var(--list-element-margin) * var(--list-margin-x));
+  padding-left: calc(var(--list-element-margin) * var(--list-margin-x));
+  font-size: var(--list-font-size);
+  line-height: var(--list-line-height);
+}
+
+.funding-links { border-right: var(--list-border); }
+
+.funding-article {
+  width: var(--article-width);
+  padding: var(--elements-padding);
+}
+
+.funding-img-container {
+  height: 100px;
+  position: relative;
+}
+
+.company-container {
+  height: 40px;
+  background: #f42;
+  padding-left: 80px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.company-container h4 {
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+}
+
+.amount-container {
+  height: 60px;
+  color: black;
+  background: rgba(255, 68, 34, 0.08);
+  padding-left: 80px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.amount-container h4 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.amount-container h5 {
+  font-weight: bold;
+  font-size: 11px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+.funding-img {
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.company-tags-container {
+  padding-left: var(--elements-padding);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 0.1px solid #f42;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.company-tags {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.company-tags li { padding-bottom: 7px; }
+
+.funding-round-info {
+  color: #555;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration: none;
+  padding-left: var(--elements-padding);
+  display: block;
+}
+
+.funding-round-info span { color: #aaa; }
+
+.fourth-article { display: var(--article-display); }
