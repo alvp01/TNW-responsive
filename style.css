@@ -460,6 +460,34 @@ body {
   background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
 }
 
+.gear-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
+.tech-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
+.creative-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
+.podium-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
+.insights-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
+.distract-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
+.launch-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
 .gradient-titles { padding: 0 15px 15px 15px; }
 
 .gradient {
@@ -477,9 +505,9 @@ body {
   padding-right: var(--section-padding);
 }
 
-.gradient a { text-decoration: none; }
+.gradient-link { text-decoration: none; }
 
-.gradient a:hover { text-decoration: underline; }
+.gradient-link:hover { text-decoration: underline; }
 
 .secondary-story-img {
   height: 95px;
