@@ -22,6 +22,8 @@ body {
   height: 100vh;
 }
 
+.padding-r-10 { padding-right: 10px; }
+
 .full-w {
   width: 100%;
 }
@@ -89,10 +91,11 @@ body {
   line-height: 18px;
 }
 
+.color-white { color: white; }
+
 .main-section {
-  --height-multiplier: 1;
-  --margin-multiplier1: 0;
-  --margin-multiplier2: 1;
+  --margin-multiplier-x: 0;
+  --margin-multiplier-y: 1;
   --articles-height: 210px;
   --main-articles-margin: 10px;
   --secondary-wrapper-width: 100%;
@@ -110,9 +113,8 @@ body {
 
 @media (min-width: 768px) {
   .main-section {
-    --height-multiplier: 2;
-    --margin-multiplier1: 1;
-    --margin-multiplier2: 0;
+    --margin-multiplier-x: 1;
+    --margin-multiplier-y: 0;
     --articles-height: 210px;
     --secondary-wrapper-width: 34%;
     --first-main-article-width: 66%;
@@ -148,8 +150,8 @@ body {
 
 .main-section-container {
   width: var(--secondary-wrapper-width);
-  padding-left: calc(var(--margin-multiplier1) * var(--main-articles-margin));
-  padding-top: calc(var(--margin-multiplier2) * var(--main-articles-margin));
+  padding-left: calc(var(--margin-multiplier-x) * var(--main-articles-margin));
+  padding-top: calc(var(--margin-multiplier-y) * var(--main-articles-margin));
 }
 
 .main-article2-container { padding-bottom: 5px; }
@@ -328,7 +330,6 @@ body {
 }
 
 .title-links {
-  flex-direction: var(--list-direction);
   padding-left: var(--elements-padding);
   flex-direction: var(--list-container-direction);
 }
@@ -426,3 +427,120 @@ body {
 .funding-round-info span { color: #aaa; }
 
 .fourth-article { display: var(--article-display); }
+
+.general-sections {
+  --section-width: 100%;
+  --section-padding: 10px;
+  --main-history-height: 250px;
+}
+
+@media (min-width: 768px) {
+  .general-sections { --section-width: 50%; }
+}
+
+@media (min-width: 1024px) {
+  .general-sections {
+    --section-width: 33%;
+    --main-history-height: 280px;
+  }
+}
+
+.general-section {
+  width: var(--section-width);
+  padding: var(--section-padding);
+}
+
+.general-section-main-story {
+  height: var(--main-history-height);
+  padding: var(--section-padding);
+  position: relative;
+}
+
+.app-main-story {
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+}
+
+.gradient-titles { padding: 0 15px 15px 15px; }
+
+.gradient {
+  background: transparent url(./image-gradient.png) no-repeat;
+  background-size: 100% 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-right: var(--section-padding);
+}
+
+.gradient a { text-decoration: none; }
+
+.gradient a:hover { text-decoration: underline; }
+
+.secondary-story-img {
+  height: 95px;
+  width: 95px;
+  float: right;
+  object-fit: cover;
+}
+
+.secondary-story-link-container {
+  justify-content: center;
+  align-items: flex-start;
+  height: 95px;
+  flex-direction: column;
+  padding-top: var(--section-padding);
+  padding-left: var(--section-padding);
+  padding-right: var(--section-padding);
+}
+
+.secondary-category,
+.secondary-links {
+  color: #f42;
+  display: inline;
+}
+
+.secondary-category {
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.secondary-links {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.secondary-links:hover { text-decoration: underline; }
+
+.general-sections-stories-links {
+  list-style: none;
+  font-size: 13px;
+  line-height: 20px;
+  padding-top: var(--section-padding);
+}
+
+.general-sections-stories-links li {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  padding-left: var(--section-padding);
+}
+
+.general-sections-stories-indv-link {
+  color: #555;
+  text-decoration: none;
+}
+
+.general-sections-stories-indv-link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.border-bottom-grey {
+  border-bottom: 1px solid #999;
+}
