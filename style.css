@@ -379,6 +379,7 @@ body {
   line-height: 22px;
   font-weight: 700;
   letter-spacing: -0.8px;
+  overflow: hidden;
 }
 
 .main-article-title {
