@@ -400,6 +400,7 @@ body {
 .main-article-title-link {
   text-decoration: none;
   color: white;
+  overflow: hidden;
 }
 
 .main-article-title-link:hover { color: white; }
