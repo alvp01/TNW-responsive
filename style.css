@@ -426,6 +426,7 @@ body {
 
 .main-article-data a:hover { color: hsla(0, 0%, 100%, 0.6); }
 
+.cover-gradient,
 .main-gradient {
   background: transparent url(./image-gradient.png) no-repeat;
   background-size: 100% 100%;
@@ -439,6 +440,31 @@ body {
   justify-content: flex-end;
   align-items: flex-start;
   padding: 10px;
+}
+
+.cover-gradient {
+  pointer-events: none;
+  position: absolute;
+}
+
+.cover-tnw {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  height: 100px;
+  width: 400px;
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .cover-tnw { display: block; }
+
+  .cover-gradient {
+    background: transparent url(./cover-gradient.png) no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+  }
 }
 
 .secondary-sections { justify-content: center; }
@@ -863,6 +889,10 @@ body {
 .footer-social-link { margin-bottom: 21px; }
 
 .footer-social-link li { margin-bottom: 5px; }
+
+@media (min-width: 768px) {
+  .footer-social-link li { margin-right: 15px; }
+}
 
 .social-icons {
   font-size: 18px;

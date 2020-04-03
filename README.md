@@ -14,10 +14,22 @@ The main objective of this project is for the students to achieve mastery over r
 - HTML & CSS
 - [Font Awesome](https://fontawesome.com/)
 
+### Approach
+
+I coded the web using the mobile first and responsive web design principles, starting from the small devices screens and adapting the layout to fix larger screen sizes.
+
+To make the web more appealing I downloaded and used some of the original website fonts, so the project could look more like the TNW website.
+
+Finally I imported some Font Awesome icons to make the footer interactive.
+
 ### Live Previews
 
 - [Development](https://raw.githack.com/alvp01/TNW-responsive/rwd-media-queries/index.html)
 - [Production](https://rawcdn.githack.com/alvp01/TNW-responsive/c31190cb070f1f3cf81c83bef35b923bdb168554/index.html)
+
+### Developer
+
+- [Abel](https://github.com/alvp01)
 
 ### Note
 
