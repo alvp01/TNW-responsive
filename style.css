@@ -22,6 +22,47 @@ body {
   height: 100vh;
 }
 
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("./LiberationSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Liberation Sans";
+  src: url("./LiberationSans-Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Avalon";
+  src: url("./Avalon_Regular.ttf");
+}
+
+@font-face {
+  font-family: "Avalon";
+  src: url("./Avalon_Bold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Shentox";
+  src: url("./Shentox.ttf");
+}
+
+@font-face {
+  font-family: "Shentox";
+  src: url("Shentox-Medium.ttf");
+  font-weight: 500;
+}
+
+.font-liberation { font-family: "Liberation Sans", sans-serif; }
+
+.font-avalon { font-family: "Avalon", sans-serif; }
+
+.font-shentox { font-family: "Shentox", sans-serif; }
+
+.d-content { display: contents; }
+
 .padding-r-10 { padding-right: 10px; }
 
 .full-w {
@@ -67,6 +108,8 @@ body {
 .section-headings {
   font-size: 28px;
   font-weight: 700;
+  font-family: "Avalon", sans-serif;
+  letter-spacing: -0.5px;
 }
 
 .orange-links {
@@ -93,6 +136,163 @@ body {
 
 .color-white { color: white; }
 
+.list-no-style { list-style: none; }
+
+.flex-row { flex-direction: row; }
+
+.margin-50 { margin-top: 50px; }
+
+.margin-30 { margin-top: 30px; }
+
+.tnw-header {
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.tnw-header-img-container {
+  width: 105px;
+  height: 50px;
+  display: flex;
+  background: linear-gradient(to bottom right, #c09, #f42 85%);
+}
+
+.tnw-header-img {
+  height: 16px;
+  width: 66px;
+}
+
+.dark-bg-nav,
+.tnw-main-nav {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-bg-nav {
+  background-color: #131313;
+  height: 30px;
+  display: none;
+}
+
+.dark-bg-news,
+.dark-bg-links {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.dark-bg-news {
+  color: white;
+  padding-left: 20px;
+  padding-right: 8px;
+}
+
+.dark.bg.news:hover { color: white; }
+
+.dark-bg-links {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+
+.dark-bg-links:hover {
+  color: white;
+}
+
+.tnw-main-nav {
+  height: 50px;
+  justify-content: flex-end;
+  background-color: white;
+}
+
+.tnw-main-nav-links {
+  color: #aaa;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: -1.4px;
+}
+
+.tnw-main-nav-links:hover { color: black; }
+
+.links-display { display: none; }
+
+.bar-menu { display: block; }
+
+.nav-icons {
+  width: 50px;
+  height: 50px;
+  border-left: 1px solid #aaa;
+  color: #aaa;
+}
+
+.bars-icon {
+  display: flex;
+  color: red;
+  font-size: 20px;
+}
+
+.nav-container { width: calc(100% - 105px); }
+
+.main-nav-list { display: none; }
+
+.yellow-bg-header {
+  background-color: #fd3;
+  height: 60px;
+  padding-left: 6px;
+  padding-right: 6px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.yellow-bg-link {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.yellow-bg-link:hover { color: black; }
+
+@media (min-width: 768px) {
+  .tnw-main-nav {
+    padding-left: 8px;
+    justify-content: space-between;
+    display: flex;
+  }
+
+  .tnw-main-nav li {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .tnw-header-img-container { height: 80px; }
+
+  .tnw-header { height: 80px; }
+
+  .dark-bg-nav { display: flex; }
+
+  .bars-icon { display: none; }
+
+  .main-nav-list { display: flex; }
+
+  .yellow-bg-header { padding-left: 126px; }
+}
+
+@media (min-width: 1024px) {
+  .links-display { display: inline; }
+
+  .tnw-header-img-container { display: none; }
+
+  .nav-container { width: 100%; }
+
+  .yellow-bg-header {
+    padding-left: 20px;
+    height: 30px;
+  }
+}
+
 .main-section {
   --margin-multiplier-x: 0;
   --margin-multiplier-y: 1;
@@ -107,7 +307,7 @@ body {
 .main-article1 {
   height: calc(var(--articles-height));
   width: var(--first-main-article-width);
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/11/pc-gaming-796x398.jpg");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/question-unknown-796x417.png");
   background-size: cover;
 }
 
@@ -124,18 +324,22 @@ body {
 }
 
 @media (min-width: 1024px) {
-  .main-section { --articles-height: 190px; }
+  .main-section {
+    --articles-height: 190px;
+
+    margin-top: 25px;
+  }
 }
 
 .main-article2 {
   height: calc(var(--articles-height));
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/11/pc-gaming-796x398.jpg");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/Untitled-design47-796x417.png");
   background-size: cover;
 }
 
 .main-article3 {
   height: calc(var(--articles-height));
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2016/11/pc-gaming-796x398.jpg");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/DD6-796x417.jpg");
   background-size: cover;
 }
 
@@ -146,6 +350,7 @@ body {
   align-items: flex-start;
   justify-content: flex-end;
   padding: 10px;
+  position: relative;
 }
 
 .main-section-container {
@@ -160,18 +365,35 @@ body {
 
 .main-category {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   color: white;
   text-decoration: none;
+  font-family: "Shentox", sans-serif;
 }
 
 .main-category:hover { color: white; }
+
+.main-article1-title {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
 
 .main-article-title {
   font-size: 20px;
   line-height: 22px;
   font-weight: 700;
+  letter-spacing: -0.8px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .main-article1-title {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .main-article-title-link {
@@ -182,7 +404,6 @@ body {
 .main-article-title-link:hover { color: white; }
 
 .main-article-data {
-  flex-direction: row;
   list-style: none;
   font-size: 12px;
   font-weight: 400;
@@ -190,7 +411,9 @@ body {
   text-decoration: none;
 }
 
-.main-article-data li { margin-right: 10px; }
+.main-article-data i { margin-right: 5px; }
+
+.main-article-data li { padding-right: 10px; }
 
 .main-article-data a {
   color: hsla(0, 0%, 100%, 0.6);
@@ -198,6 +421,21 @@ body {
 }
 
 .main-article-data a:hover { color: hsla(0, 0%, 100%, 0.6); }
+
+.main-gradient {
+  background: transparent url(./image-gradient.png) no-repeat;
+  background-size: 100% 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 10px;
+}
 
 .secondary-sections { justify-content: center; }
 
@@ -246,6 +484,7 @@ body {
 .latest-article {
   width: var(--article-width);
   padding: var(--elements-padding);
+  margin-bottom: var(--elements-padding);
 }
 
 .latest-article-img,
@@ -268,17 +507,21 @@ body {
   justify-content: center;
 }
 
-.latest-articles-headings { font-weight: 700; }
+.latest-articles-headings {
+  font-weight: bold;
+  font-family: "Liberation Sans", sans-serif;
+
+}
 
 .latest-article-info {
   list-style: none;
   font-size: 12px;
-  flex-direction: row;
   text-decoration: none;
   color: #aaa;
   padding-left: 0;
   margin-top: 5px;
   margin-bottom: 0;
+  font-family: "Liberation Sans", sans-serif;
 }
 
 .latest-article-info li { margin-right: 10px; }
@@ -348,6 +591,7 @@ body {
 .funding-article {
   width: var(--article-width);
   padding: var(--elements-padding);
+  margin-bottom: var(--elements-padding);
 }
 
 .funding-img-container {
@@ -382,6 +626,7 @@ body {
 .amount-container h4 {
   font-weight: bold;
   font-size: 18px;
+  font-family: "Liberation Sans", sans-serif;
 }
 
 .amount-container h5 {
@@ -389,6 +634,8 @@ body {
   font-size: 11px;
   opacity: 0.5;
   text-transform: uppercase;
+  letter-spacing: 0.4px;
+  font-family: "Shentox", sans-serif;
 }
 
 .funding-img {
@@ -411,7 +658,11 @@ body {
 .company-tags {
   font-size: 13px;
   font-weight: 400;
+  font-family: "Liberation Sans", sans-serif;
+  color: #555;
 }
+
+.company-tags i { color: black; }
 
 .company-tags li { padding-bottom: 7px; }
 
@@ -422,6 +673,7 @@ body {
   text-decoration: none;
   padding-left: var(--elements-padding);
   display: block;
+  font-family: "Liberation Sans", sans-serif;
 }
 
 .funding-round-info span { color: #aaa; }
@@ -448,6 +700,7 @@ body {
 .general-section {
   width: var(--section-width);
   padding: var(--section-padding);
+  margin-bottom: var(--section-padding);
 }
 
 .general-section-main-story {
@@ -457,35 +710,35 @@ body {
 }
 
 .app-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/Messenger-Desktop-368x276.jpg");
 }
 
 .gear-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/04/Intel-Core-i9-hed-368x276.jpg");
 }
 
 .tech-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/04/socialmedia2-368x276.png");
 }
 
 .creative-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/deletion_header-368x276.png");
 }
 
 .podium-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/question-unknown-368x276.png");
 }
 
 .insights-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/fleet-ops-computers-368x276.png");
 }
 
 .distract-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/10/facebook-368x276.png");
 }
 
 .launch-main-story {
-  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2019/09/app-store-apple-hed-368x276.png");
+  background-image: url("https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2020/03/Google-coronavirus-portal-368x276.jpg");
 }
 
 .gradient-titles { padding: 0 15px 15px 15px; }
@@ -504,6 +757,9 @@ body {
   align-items: flex-start;
   padding-right: var(--section-padding);
 }
+
+.gradient-titles ul,
+.gradient-titles h2 { margin-top: 5px; }
 
 .gradient-link { text-decoration: none; }
 
@@ -536,12 +792,15 @@ body {
   font-size: 13px;
   font-weight: 500;
   text-transform: uppercase;
+  font-family: "Shentox", sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .secondary-links {
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
+  font-family: "Liberation Sans", sans-serif;
 }
 
 .secondary-links:hover { text-decoration: underline; }
@@ -573,6 +832,13 @@ body {
   border-bottom: 1px solid #999;
 }
 
+.decoration-text-through { text-decoration: line-through; }
+
+.price-size {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .dark-gray-bg-footer {
   background-color: #131313;
   flex-wrap: wrap;
@@ -583,7 +849,6 @@ body {
 }
 
 .footer-list {
-  flex-direction: row;
   list-style: none;
   flex-wrap: wrap;
   padding-left: 0;
@@ -637,13 +902,15 @@ body {
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .black-bg-footer { flex-direction: row; }
-}
-
 .black-bg-footer b { color: red; }
 
 .black-bg-footer span { flex-direction: row; }
+
+@media (min-width: 768px) {
+  .black-bg-footer { flex-direction: row; }
+
+  .black-bg-footer span { margin-left: 5px; }
+}
 
 .tnw-footer {
   height: 9px;
